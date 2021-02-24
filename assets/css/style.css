@@ -6,15 +6,12 @@ h1 {
 	text-align: center;
 }
 
-form {
+#creationform {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-input {
-	margin-top: 5px;
-	margin-bottom: 15px;
+#creationform input {
+	margin: 5px;
 }
