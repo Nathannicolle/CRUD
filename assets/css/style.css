@@ -15,3 +15,11 @@ h1 {
 #creationform input {
 	margin: 5px;
 }
+
+table {
+	border-collapse: collapse;
+}
+
+table td {
+	border: 1px solid black;
+}
