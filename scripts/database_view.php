@@ -3,6 +3,7 @@ include "functions.php";
 get_header();
 $statement=connect()->query('select * from Organization');
 ?>
+<a href="../index.php">Accueil</a>
 <table id="organizationlist">
 <tr>
     <td>name</td>
@@ -11,12 +12,12 @@ $statement=connect()->query('select * from Organization');
 </tr>
 
 <?php
-$idligne = 0;
 foreach ($statement as $row) {
+    $id = $row['id'];
     echo "<tr><td>" . $row['name'] . "</td>";
     echo "<td>" . $row['domain'] . "</td>";
     echo "<td>" . $row['aliases'] . "<br></td>";
-    $idligne = $idligne + 1;
-    echo "<td><button type='submit' class='fas fa-trash-alt button_delete'></button></td></tr>";
+    echo "<td><a href='#' title='modifier'><i class='fas fa-pen'></i></a></td>";
+    echo "<td><a href='delete.php?id=$id' title='supprimer'><i class='fas fa-trash-alt'></i></a></td></tr>";
 }?>
 </table>
