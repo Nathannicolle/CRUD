@@ -2,12 +2,13 @@
 function get_header() {
 ?> 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="h-full">
     <head>
         <meta charset="utf-8">
         <title>CRUD</title>
-        <link rel="stylesheet" type="text/css" href="../assets/fa/css/all.css">
-        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/crud/assets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/crud/assets/fa/css/all.css">
+        <link rel="stylesheet" type="text/css" href="/crud/assets/css/style.css">
     </head>
     <body>
 <?php

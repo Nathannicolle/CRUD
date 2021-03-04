@@ -17,7 +17,7 @@ foreach ($statement as $row) {
     echo "<tr><td>" . $row['name'] . "</td>";
     echo "<td>" . $row['domain'] . "</td>";
     echo "<td>" . $row['aliases'] . "<br></td>";
-    echo "<td><a href='#' title='modifier'><i class='fas fa-pen'></i></a></td>";
+    echo "<td><a href='modify.php?id=$id' title='modifier'><i class='fas fa-pen'></i></a></td>";
     echo "<td><a href='delete.php?id=$id' title='supprimer'><i class='fas fa-trash-alt'></i></a></td></tr>";
 }?>
 </table>
