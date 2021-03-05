@@ -8,10 +8,10 @@
         $name = $row['name'];
         $domain = $row['domain'];
         $aliases = $row['aliases'];
-        echo "<form method='POST' action='modify_script.php'><input type='text' name='name' value='$name'>";
+        echo "<form method='POST' action='modify_script.php' class='form_modify'><input type='text' name='name' value='$name'>";
         echo "<input type='text' name='domain' value='$domain'>";
         echo "<input type='text' name='aliases' value='$aliases'><br>";
         echo "<input type='hidden' value='". $id ."' name='id'>";
-        echo "<button>Modifier</button></form>";
+        echo "<button class='btn btn-outline-primary'>Modifier</button></form>";
     }
     ?>

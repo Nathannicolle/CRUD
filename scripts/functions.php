@@ -11,11 +11,22 @@ function get_header() {
         <link rel="stylesheet" type="text/css" href="/crud/assets/css/style.css">
     </head>
     <body>
+    <div class="banner">
+        <h1><i>C.R.U.D</i><br></h1>
+        <h2 class="subtitle">Create.Read.Update.Delete</h2>
+    </div>
+    <ul class="nav">
+        <li class="nav-item"><a href="/crud/index.php" class="nav-link">Accueil</a></li>
+        <li class="nav-item"><a href="/crud/scripts/create.php" class="nav-link">Création</a></li>
+        <li class="nav-item"><a href="/crud/scripts/database_view.php" class="nav-link">Voir/Editer</a></li>
+    </ul>
+    <div class="container">
 <?php
 }
 
 function get_footer() {
 ?>
+    </div>
     </body>
 </html>
 <?php
