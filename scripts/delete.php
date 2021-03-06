@@ -8,7 +8,6 @@
             echo "<a href='database_view.php' class='btn btn-outline-primary'>Retour à la liste</a>";
         }
     } catch(\PDOException $e) {
-        echo $e->getMessage();
-        echo "Impossible de supprimer l'organisation";
+        echo "<h1 class='error'><i class='fas fa-times'></i> Impossible de supprimer l'organisation </h1>";
     }
 ?>

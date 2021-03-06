@@ -11,8 +11,7 @@ try {
         echo "<a href='create.php' class='btn btn-outline-primary'>En créer une nouvelle</a>";
     }
 } catch(\PDOException $e) {
-    echo $e->getMessage();
-    echo "Impossible d'ajouter l'organisation " . $domain;
+    echo "<h1 class='error'><i class='fas fa-times'></i> Impossible d'ajouter l'organisation " . $orga . "</h1>";
 }
 }
 
