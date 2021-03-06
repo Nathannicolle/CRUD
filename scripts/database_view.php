@@ -1,9 +1,18 @@
 <?php
 include "functions.php";
 get_header();
-$statement=connect()->query('select * from Organization');
+if(isset($_GET['search']) AND !empty($_GET['search'])) {
+    $recherche=htmlspecialchars($_GET['search']);
+    $statement=connect()->query("SELECT * FROM Organization WHERE name LIKE '%" . $recherche . "%' or domain LIKE '%" . $recherche . "%' or aliases LIKE '%" . $recherche . "%'");
+} else {
+    $statement=connect()->query("SELECT * FROM Organization");
+}
 ?>
 <h1>Liste des organisations</h1>
+<form method="GET" class="search_form">
+    <input type="search" name="search" placeholder="Rechercher une organisation" class="form-control"/>
+    <input type="submit" name="search-btn" value="Chercher" class="btn btn-outline-primary" title="Chercher une organisation">
+</form>
 <table id="organizationlist">
 <tr id="first-line">
     <td>name</td>

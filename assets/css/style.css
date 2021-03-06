@@ -199,6 +199,16 @@ table #first-line {
 	margin-right: 1%;
 }
 
+/* recherche */
+.search_form {
+	display: flex;
+	margin-bottom: 2%;
+}
+
+.search_form .btn {
+	margin-left: 2%;
+}
+
 
 /* responsive */
 @media screen and (max-width: 1450px) {
@@ -317,5 +327,10 @@ table #first-line {
 	.form_modify button {
 		margin-top: 2%;
 		margin-bottom: 2%;
+	}
+
+	/* recherche */
+	.search_form input:first-child {
+		font-size: 2em;
 	}
 }

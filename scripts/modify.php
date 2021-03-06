@@ -8,9 +8,9 @@
         $name = $row['name'];
         $domain = $row['domain'];
         $aliases = $row['aliases'];
-        echo "<form method='POST' action='modify_script.php' class='form_modify'><input type='text' name='name' value='$name'>";
-        echo "<input type='text' name='domain' value='$domain'>";
-        echo "<input type='text' name='aliases' value='$aliases'><br>";
+        echo "<form method='POST' action='modify_script.php' class='form_modify'><input type='text' name='name' value='$name' class='form-control'>";
+        echo "<input type='text' name='domain' value='$domain' class='form-control'>";
+        echo "<input type='text' name='aliases' value='$aliases' class='form-control'><br>";
         echo "<input type='hidden' value='". $id ."' name='id'>";
         echo "<button class='btn btn-outline-primary'>Modifier</button></form>";
     }
