@@ -4,10 +4,12 @@
     $dbo=connect();
     try {
         if(connect()->exec("DELETE FROM Organization WHERE id =" . $_GET["id"])) {
-            echo "<h1 class='success'><i class='fas fa-check'></i> Organisation supprimée<br></h1>";
-            echo "<a href='database_view.php' class='btn btn-outline-primary'>Retour à la liste</a>";
-        }
+        ?>
+            <h1 class='success'><i class='fas fa-check'></i> Organisation supprimée<br></h1>
+            <a href='database_view.php' class='btn btn-outline-primary'>Retour à la liste</a>
+        <?php }
     } catch(\PDOException $e) {
-        echo "<h1 class='error'><i class='fas fa-times'></i> Impossible de supprimer l'organisation </h1>";
-    }
+        ?>
+        <h1 class='error'><i class='fas fa-times'></i> Impossible de supprimer l'organisation </h1>
+    <?php }
 ?>
