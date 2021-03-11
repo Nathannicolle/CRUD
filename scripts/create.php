@@ -2,10 +2,16 @@
 include "functions.php";
 get_header();
 ?>
-<h1>Création d'une organisation</h1>
-<form method="post" action="database_add.php" id="creationform">
-        <input type="text" name="orga" placeholder="Entrez le nom de l'organisation*" class="form-control" required/>
-        <input type="text" name="domain" placeholder="Entrez le domaine de l'organisation" class="form-control" />
-        <input type="text" name="aliases" placeholder="Entrez l'alias de l'organisation" class="form-control" />
-        <input type="submit" value="Ajouter" id="add" name="add" class="btn btn-outline-success">
-</form>
+<h1>Sélectionnez l'élement que vous souhaitez ajouter</h1>
+<div class="box_acc">
+    <div class="box box1">
+        <h1>Créer une organisation</h1>
+        <p>Créer une organisation avec un nom, un domaine et un aliase</p>
+        <a href="create_orga.php" class="btn btn-outline-primary">Créer</a>
+    </div>
+    <div class="box box2">
+        <h1>Créer un utilisateur</h1>
+        <p>Créer une utilisateur avec un prénom, un nom, un email, un mot de passe</p>
+        <a href="create_user.php" class="btn btn-outline-primary">Créer</a>
+    </div>
+</div>

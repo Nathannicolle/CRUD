@@ -86,6 +86,7 @@ h1 {
 /* accueil */
 .box_acc {
 	display: flex;
+	width: 100%;
 }
 
 .box {
@@ -125,9 +126,12 @@ h1 {
 	margin-right: 2%;
 }
 
+.box3 {
+	margin-right: 2%;
+}
 
 /* création d'une organisation */
-#creationform {
+.creationform {
 	display: flex !important;
 	flex-direction: column !important;
 	width: 40%;
@@ -135,7 +139,7 @@ h1 {
 	margin-right: auto;
 }
 
-#creationform input {
+.creationform input {
 	margin: 5px;
 }
 
