@@ -18,14 +18,7 @@ function get_header() {
     <div class="menu">
     <ul class="nav">
         <li class="nav-item"><a href="/crud/index.php" class="nav-link">Accueil</a></li>
-        <li class="nav-item"><a href="/crud/scripts/create.php" class="nav-link">Création <!--<i class="fas fa-chevron-down"></i>--></a>
-            <div class="sub-menu">
-                <ul>
-                    <li class="dropdown-element"><a href="#" class="nav-link">Créer une organisation</a></li>
-                    <li class="dropdown-element"><a href="#" class="nav-link">Créer un utilisateur</a></li>
-                </ul>
-            </div>
-        </li>
+        <li class="nav-item"><a href="/crud/scripts/create.php" class="nav-link">Création <!--<i class="fas fa-chevron-down"></i>--></a></li>
         <li class="nav-item"><a href="/crud/scripts/database_view.php" class="nav-link">Voir/Editer</a></li>
     </ul>
 </div>
@@ -88,7 +81,7 @@ function view($table_name, $datas) {
                 $table .= "<td>" . $value . "</td>";
             }
         $table .= "<td class='btn-table'><a href='modify.php?id=$id' title='modifier' class='btn btn-outline-dark'><i class='fas fa-pen'></i></a></td>"; 
-        $table .= "<td class='btn-table'><a href='delete.php?id=$id' title='supprimer' class='btn btn-outline-danger'><i class='fas fa-trash-alt'></i></a></td></tr>";
+        $table .= "<td class='btn-table'><a href='?id=$id' title='supprimer' class='btn btn-outline-danger'><i class='fas fa-trash-alt'></i></a></td></tr>";
     }
     $table .= "</table>";
     echo $table;
@@ -102,6 +95,11 @@ function update($table,$fieldvalues){
     }
     $res.= \implode(',',$parts);
     return $res." WHERE id=:id";
+}
+
+function delete($table_name, $id) {
+    $statementdelete = connect()->prepare("DELETE FROM $table_name WHERE id =" . $id);
+    return $statementdelete;
 }
 
 ?>

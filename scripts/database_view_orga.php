@@ -26,6 +26,20 @@ try {
     echo "erreur d'affichage";
 }
 
+$cmd_delete = delete("Organization", $_GET['id']??0);
+if(isset($_GET['id']) and !empty($_GET['id']) and $_GET['id'] != 0) {
+try {
+    if($cmd_delete->execute()) {
+    ?>      
+        <h1 class='success'><i class='fas fa-check'></i> Organisation supprimée<br></h1>
+        <a href='database_view_orga.php' class='btn btn-outline-primary'>Actualiser</a>
+    <?php }
+} catch(\PDOException $e) {
+    ?>
+    <h1 class='error'><i class='fas fa-times'></i> Impossible de supprimer l'organisation </h1>
+<?php }
+}
+
 /*$cmd_connect = connect();
 $cmd_view_fct = view_function("Organization");
 $cmd_view_fct_fetch = $cmd_view_fct->fetchAll(PDO::FETCH_ASSOC);
