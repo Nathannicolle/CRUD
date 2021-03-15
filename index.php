@@ -12,7 +12,7 @@ get_header();
     <div class="box box2">
         <h1>Voir/Editer/Supprimer une organisation</h1>
         <p>Voir la liste des organisations, en éditer ou en supprimer</p>
-        <a href="scripts/database_view.php" class="btn btn-outline-primary">Voir</a>
+        <a href="scripts/database_view_orga.php" class="btn btn-outline-primary">Voir</a>
     </div>  
 </div>
 <div class="box_acc">
@@ -24,6 +24,6 @@ get_header();
     <div class="box box4">
         <h1>Voir/Editer/Supprimer un utilisateur</h1>
         <p>Voir la liste des utilisateurs, en éditer ou en supprimer</p>
-        <a href="scripts/database_view.php" class="btn btn-outline-primary">Voir</a>
+        <a href="scripts/database_view_user.php" class="btn btn-outline-primary">Voir</a>
     </div>  
 </div>

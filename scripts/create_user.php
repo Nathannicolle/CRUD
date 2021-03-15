@@ -18,7 +18,7 @@ $cmd = create("user", $_POST);
 if(isset($_POST['firstname']) and isset($_POST['lastname']) and isset($_POST['email']) and isset($_POST['password']) and !empty($_POST['firstname']) and !empty($_POST['lastname']) and !empty($_POST['email']) and !empty($_POST['password'])) {
 try {
     if(connect()->exec($cmd) == 1) {
-        ?> <h1 class='success'><i class='fas fa-check'></i> Utilisateur ajoutée <br></h1>
+        ?> <h1 class='success'><i class='fas fa-check'></i> Utilisateur ajouté <br></h1>
     <?php }
 } catch(\PDOException $e) {
 ?>

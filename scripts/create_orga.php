@@ -15,7 +15,7 @@ $cmd = create("Organization", $_POST);
 if(isset($_POST['name']) and isset($_POST['domain']) and isset($_POST['aliases']) and !empty($_POST['name'])) {
 try {
     if(connect()->exec($cmd) == 1) {
-        ?> <h1 class='success'><i class='fas fa-check'></i> Organisation ajouté <br></h1>
+        ?> <h1 class='success'><i class='fas fa-check'></i> Organisation ajoutée <br></h1>
     <?php }
 } catch(\PDOException $e) {
 ?>

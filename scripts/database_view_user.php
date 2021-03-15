@@ -8,7 +8,7 @@ get_header();
     $statement=connect()->query("SELECT * FROM Organization");
 }*/
 ?>
-<h1>Liste des organisations</h1>
+<h1>Liste des utilisateurs</h1>
 <form method="GET" class="search_form">
     <input type="search" name="search" placeholder="Rechercher une organisation" class="form-control"/>
     <input type="submit" name="search-btn" value="Chercher" class="btn btn-outline-primary" title="Chercher une organisation">
@@ -16,11 +16,11 @@ get_header();
 <?php
 
 $cmd_connect = connect();
-$cmd_view_fct = view_function("Organization");
+$cmd_view_fct = view_function("user");
 try {
     if($cmd_view_fct->execute()) {
         $datas = $cmd_view_fct->fetchAll(PDO::FETCH_ASSOC);
-        view("Organization", $datas);
+        view("user", $datas);
     }
 } catch(\PDOException $e) {
     echo "erreur d'affichage";

@@ -181,7 +181,7 @@ table td {
 	padding: 1%;
 }
 
-table #first-line {
+table .first-line {
 	text-align: center;
 }
 /* modification d'une organisation */
