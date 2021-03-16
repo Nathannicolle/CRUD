@@ -2,8 +2,7 @@
     include "functions.php";
     get_header();
     $dbo=connect();
-    $statement=connect()->query("select * from Organization WHERE id =" . $_GET["id"]);
-    foreach ($statement as $row) {
+    foreach ($cmd as $row) {
         $id = $row['id'];
         $name = $row['name'];
         $domain = $row['domain'];
